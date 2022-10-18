@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/15/33/contact-1293388_1280.png');
+  background-size: cover;
+}
