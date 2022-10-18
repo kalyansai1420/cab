@@ -1,2 +1,20 @@
-<p>cab-details works!</p>
+<div *ngFor="let c of cab" >
+
+    <h1 *ngIf="cabId == c.cabId" >{{c.cabName}}</h1>
+
+
+    <button *ngIf="cabId == c.cabId" class="button-two" (click)="bookaride()">
+          <span>Book A ride</span>
+        </button>
+        <button 
+        *ngIf="cabId == c.cabId" 
+        class="button-two"
+        [routerLink]="'/admin'" 
+        >
+            <span>Go Back</span>
+        </button>
+
+</div>
+
+
 

@@ -1,23 +1,25 @@
 <mat-card class="example-card" *ngFor="let c of cab">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{c.cabName}}</mat-card-title>
-    <mat-card-subtitle>{{c.cabDesc}}</mat-card-subtitle>
+    <mat-card-title>{{ c.cabName }}</mat-card-title>
+    <mat-card-subtitle>{{ c.cabDesc }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="{{c.cabImage}}" alt="Photo of a Car">
+  <img mat-card-image src="{{ c.cabImage }}" alt="Photo of a Car" />
   <mat-card-content>
     <p>
-      {{c.cabFrom}}
+      {{ c.cabFrom }}
     </p>
     <p>
-
-      {{c.cabPrice | currency: "INR" }}
+      {{ c.cabPrice | currency: "INR" }}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button 
-    [routerLink]="'/admin/cabdetails/'+c.cabId"
-    (click)="submit(c.cabId)"
-    >Book A Ride</button>
+    <button
+      mat-button
+      [routerLink]="'/cab/' + c.cabId"
+      (click)="submit(c.cabId)"
+    >
+      Book A Ride
+    </button>
   </mat-card-actions>
 </mat-card>

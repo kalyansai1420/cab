@@ -12,14 +12,11 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    children: [
-      {
-        path: 'cabdetails/:cabId',
-        component: CabDetailsComponent,
-        pathMatch: 'full',
-      },
-    ],
   },
+  {
+    path: 'cab/:cabId',
+    component:CabDetailsComponent
+  }
 ];
 
 @NgModule({
